@@ -60,8 +60,8 @@ integrate_1D_Naive( double (*function)(double, double*),
     }
     ninside += inside;
   } // trials
-
-  return (double)ninside/ntrials;
+  double dim = (range_f-range_i);
+  return (double)ninside/ntrials*dim*dim;
 }
 
 //------------------------------------------------------------------------------

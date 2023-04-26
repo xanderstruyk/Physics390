@@ -3,7 +3,7 @@ CPPFLAGS = -O2 -g -Iinclude
 
 all : lib test
 
-objs = integration_Naive.o integration_MeanVariance.o
+objs = integration_Naive.o integration_MeanVariance.o pdfs.o
 objs := $(addprefix obj/, $(objs)) 
 
 lib : $(objs)
@@ -19,7 +19,7 @@ obj/%.o : src/%.cc
 	$(CPP) $(CPPFLAGS) -c $^ -o $@
 
 
-test : bin/test_pi_1D_Naive bin/test_pi_1D_MeanVariance
+test : bin/test_pi_1D_Naive bin/test_pi_1D_MeanVariance bin/test_mb_1D_Naive
 
 
 clean : 
