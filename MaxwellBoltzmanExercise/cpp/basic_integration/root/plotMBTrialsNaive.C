@@ -20,7 +20,7 @@ plotMBTrialsNaive() {
     if( i == 0 )
       harr[i] = new TH1F(mystr,mystr,100,0,6);
     else 
-      harr[i] = new TH1F(mystr,mystr,100,3.6,4.4);
+      harr[i] = new TH1F(mystr,mystr,100,0.8,1.2);
 
     sprintf(mystr, "t%d", sample_sizes[i]);    
     tarr[i] = new TTree(mystr,mystr);
@@ -36,10 +36,10 @@ plotMBTrialsNaive() {
 
   TCanvas * c = new TCanvas("c","c", 0, 0, 700, 600);
   c->SetFillColor(kBlack);
-  TH1F* frame = (TH1F*)(c->DrawFrame(3.6,0.1,4.4,1.1*harr[N_SAMPLE_SIZES-1]->GetMaximum()));
+  TH1F* frame = (TH1F*)(c->DrawFrame(0.8,0.1,1.2,1.1*harr[N_SAMPLE_SIZES-1]->GetMaximum()));
   frame->SetName("myframe");
   frame->SetFillColor(kBlack);
-  frame->GetXaxis()->SetTitle("#hat{#pi}");
+  frame->GetXaxis()->SetTitle("Should be 1");
   frame->GetXaxis()->SetAxisColor(kWhite);
   frame->GetXaxis()->SetLabelColor(kWhite);
   frame->GetXaxis()->SetTitleColor(kWhite);

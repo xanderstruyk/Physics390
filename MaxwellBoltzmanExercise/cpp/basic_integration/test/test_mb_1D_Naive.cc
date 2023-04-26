@@ -32,6 +32,6 @@ main(int argc, char** argv )
 
   // with true error
   fprintf( stderr, "Area: %lf\t4xArea: %lf\terror: %lf\tNtrials: %lu\n", 
-	   area, 4*area, binomial_error(ntrials, ntrials/25.), ntrials);
+	   area, area, binomial_error(ntrials, ntrials/25.), ntrials);
 
 }
