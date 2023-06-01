@@ -1,0 +1,9 @@
+#ifndef VEGAS_CONSTANTS
+#define VEGAS_CONSTANTS
+
+#define VEGAS_MIN_EVT 20
+//#define VEGAS_MIN_EVT 2
+#define VEGAS_HIGH_RANGE 5.
+#define VEGAS_CONVERGENCE_THRESHOLD 2e-3
+
+#endif
